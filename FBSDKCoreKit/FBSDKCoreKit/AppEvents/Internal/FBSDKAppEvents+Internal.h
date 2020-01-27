@@ -108,11 +108,9 @@ FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKLiveStreamingCamera;
 
 /** Use to log the results of a share dialog */
 FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventShareDialogResult;
-FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventMessengerShareDialogResult;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventAppInviteShareDialogResult;
 
 FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventShareDialogShow;
-FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventMessengerShareDialogShow;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventNameFBSDKEventAppInviteShareDialogShow;
 
 FOUNDATION_EXPORT NSString *const FBSDKAppEventParameterDialogMode;
@@ -143,9 +141,6 @@ FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeStatus;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypePhoto;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeVideo;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeCamera;
-FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeMessengerGenericTemplate;
-FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeMessengerMediaTemplate;
-FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeMessengerOpenGraphMusicTemplate;
 FOUNDATION_EXPORT NSString *const FBSDKAppEventsDialogShareContentTypeUnknown;
 
 

@@ -401,15 +401,6 @@ static NSMapTable *_transientObjects;
   return [self _canOpenURLScheme:FBSDK_CANOPENURL_FACEBOOK];
 }
 
-+ (BOOL)isMessengerAppInstalled
-{
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    [FBSDKInternalUtility checkRegisteredCanOpenURLScheme:FBSDK_CANOPENURL_MESSENGER];
-  });
-  return [self _canOpenURLScheme:FBSDK_CANOPENURL_MESSENGER];
-}
-
 + (BOOL)isMSQRDPlayerAppInstalled
 {
   static dispatch_once_t onceToken;
@@ -480,7 +471,7 @@ static NSMapTable *_transientObjects;
 
 + (void)validateFacebookReservedURLSchemes
 {
-  for (NSString * fbUrlScheme in @[FBSDK_CANOPENURL_FACEBOOK, FBSDK_CANOPENURL_MESSENGER, FBSDK_CANOPENURL_FBAPI, FBSDK_CANOPENURL_SHARE_EXTENSION]) {
+  for (NSString * fbUrlScheme in @[FBSDK_CANOPENURL_FACEBOOK, FBSDK_CANOPENURL_FBAPI, FBSDK_CANOPENURL_SHARE_EXTENSION]) {
     if ([self isRegisteredURLScheme:fbUrlScheme]) {
       NSString *reason = [NSString stringWithFormat:@"%@ is registered as a URL scheme. Please move the entry from CFBundleURLSchemes in your Info.plist to LSApplicationQueriesSchemes. If you are trying to resolve \"canOpenURL: failed\" warnings, those only indicate that the Facebook app is not installed on your device or simulator and can be ignored.", fbUrlScheme];
       @throw [NSException exceptionWithName:@"InvalidOperationException" reason:reason userInfo:nil];

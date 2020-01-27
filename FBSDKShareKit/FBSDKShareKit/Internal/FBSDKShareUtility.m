@@ -310,7 +310,6 @@
       [FBSDKBasicUtility dictionary:parameters setObject:@[hashtagString] forKey:@"hashtags"];
     }
   }
-  [FBSDKBasicUtility dictionary:parameters setObject:shareContent.pageID forKey:@"pageID"];
   [FBSDKBasicUtility dictionary:parameters setObject:shareContent.shareUUID forKey:@"shareUUID"];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
