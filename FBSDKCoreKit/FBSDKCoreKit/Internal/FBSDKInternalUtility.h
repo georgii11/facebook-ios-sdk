@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define FBSDK_CANOPENURL_FACEBOOK @"fbauth2"
 #define FBSDK_CANOPENURL_FBAPI @"fbapi"
+#define FBSDK_CANOPENURL_MESSENGER @"fb-messenger-share-api"
 #define FBSDK_CANOPENURL_MSQRD_PLAYER @"msqrdplayer"
 #define FBSDK_CANOPENURL_SHARE_EXTENSION @"fbshareextension"
 
@@ -294,6 +295,7 @@ NS_SWIFT_NAME(InternalUtility)
 #pragma mark - FB Apps Installed
 
 @property (class, nonatomic, assign, readonly) BOOL isFacebookAppInstalled;
+@property (class, nonatomic, assign, readonly) BOOL isMessengerAppInstalled;
 @property (class, nonatomic, assign, readonly) BOOL isMSQRDPlayerAppInstalled;
 
 + (void)checkRegisteredCanOpenURLScheme:(NSString *)urlScheme;
